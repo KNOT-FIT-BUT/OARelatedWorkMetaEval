@@ -1,0 +1,2016 @@
+True rates for human_82:
+	gpt_4o_mini_go_all: 77/147 = 0.52
+	human: 52/121 = 0.43
+	primera_go_all: 69/140 = 0.49
+All human_82:
+                          precision    recall  f1-score   support
+
+                    True       0.91      0.63      0.74       286
+True, but wrong citation       0.75      0.69      0.72        13
+            Unverifiable       0.30      0.92      0.46        50
+                   False       0.64      0.51      0.57        59
+
+                accuracy                           0.65       408
+               macro avg       0.65      0.69      0.62       408
+            weighted avg       0.79      0.65      0.68       408
+
+	Cohen's kappa: 0.41278420242157066
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          180 |                            1 |                           89 |                           16
+	    True, but wrong citation |                            3 |                            9 |                            1 |                            0
+	                Unverifiable |                            3 |                            0 |                           46 |                            1
+	                       False |                           12 |                            2 |                           15 |                           30
+
+All human_82 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.91      0.63      0.74       286
+      Faulty       0.50      0.85      0.63       122
+
+    accuracy                           0.70       408
+   macro avg       0.70      0.74      0.69       408
+weighted avg       0.79      0.70      0.71       408
+
+	Cohen's kappa: 0.3992590481618695
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          180 |                          106
+	                      Faulty |                           18 |                          104
+
+All human_82 (merge):
+              precision    recall  f1-score   support
+
+        True       0.92      0.65      0.76       299
+       False       0.46      0.84      0.60       109
+
+    accuracy                           0.70       408
+   macro avg       0.69      0.74      0.68       408
+weighted avg       0.80      0.70      0.72       408
+
+	Cohen's kappa: 0.3886858646396725
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          193 |                          106
+	                       False |                           17 |                           92
+
+Random Subset human_82:
+                          precision    recall  f1-score   support
+
+                    True       0.92      0.65      0.76       251
+True, but wrong citation       0.78      0.70      0.74        10
+            Unverifiable       0.30      0.90      0.45        40
+                   False       0.55      0.45      0.49        40
+
+                accuracy                           0.66       341
+               macro avg       0.63      0.68      0.61       341
+            weighted avg       0.80      0.66      0.69       341
+
+	Cohen's kappa: 0.3927727119216482
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          164 |                            1 |                           72 |                           14
+	    True, but wrong citation |                            3 |                            7 |                            0 |                            0
+	                Unverifiable |                            3 |                            0 |                           36 |                            1
+	                       False |                            9 |                            1 |                           12 |                           18
+
+Random Subset human_82 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.92      0.65      0.76       251
+      Faulty       0.46      0.83      0.60        90
+
+    accuracy                           0.70       341
+   macro avg       0.69      0.74      0.68       341
+weighted avg       0.80      0.70      0.72       341
+
+	Cohen's kappa: 0.38733882900021144
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          164 |                           87
+	                      Faulty |                           15 |                           75
+
+Random Subset human_82 (merge):
+              precision    recall  f1-score   support
+
+        True       0.93      0.67      0.78       261
+       False       0.44      0.84      0.58        80
+
+    accuracy                           0.71       341
+   macro avg       0.68      0.75      0.68       341
+weighted avg       0.82      0.71      0.73       341
+
+	Cohen's kappa: 0.3858985320066215
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          175 |                           86
+	                       False |                           13 |                           67
+
+Adversarial Subset human_82:
+                          precision    recall  f1-score   support
+
+                    True       0.84      0.46      0.59        35
+True, but wrong citation       0.67      0.67      0.67         3
+            Unverifiable       0.32      1.00      0.49        10
+                   False       0.86      0.63      0.73        19
+
+                accuracy                           0.60        67
+               macro avg       0.67      0.69      0.62        67
+            weighted avg       0.76      0.60      0.62        67
+
+	Cohen's kappa: 0.4414942883606051
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           16 |                            0 |                           17 |                            2
+	    True, but wrong citation |                            0 |                            2 |                            1 |                            0
+	                Unverifiable |                            0 |                            0 |                           10 |                            0
+	                       False |                            3 |                            1 |                            3 |                           12
+
+Adversarial Subset human_82 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.84      0.46      0.59        35
+      Faulty       0.60      0.91      0.72        32
+
+    accuracy                           0.67        67
+   macro avg       0.72      0.68      0.66        67
+weighted avg       0.73      0.67      0.66        67
+
+	Cohen's kappa: 0.35576923076923084
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           16 |                           19
+	                      Faulty |                            3 |                           29
+
+Adversarial Subset human_82 (merge):
+              precision    recall  f1-score   support
+
+        True       0.82      0.47      0.60        38
+       False       0.56      0.86      0.68        29
+
+    accuracy                           0.64        67
+   macro avg       0.69      0.67      0.64        67
+weighted avg       0.70      0.64      0.63        67
+
+	Cohen's kappa: 0.3151618398637137
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           18 |                           20
+	                       False |                            4 |                           25
+
+Human Disagreement Subset human_82:
+                          precision    recall  f1-score   support
+
+                    True       0.70      0.37      0.48        57
+True, but wrong citation       0.62      0.62      0.62         8
+            Unverifiable       0.17      0.62      0.26         8
+                   False       0.46      0.58      0.51        19
+
+                accuracy                           0.46        92
+               macro avg       0.49      0.55      0.47        92
+            weighted avg       0.60      0.46      0.48        92
+
+	Cohen's kappa: 0.232565899232566
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           21 |                            1 |                           23 |                           12
+	    True, but wrong citation |                            2 |                            5 |                            1 |                            0
+	                Unverifiable |                            2 |                            0 |                            5 |                            1
+	                       False |                            5 |                            2 |                            1 |                           11
+
+Human Disagreement Subset human_82 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.70      0.37      0.48        57
+      Faulty       0.42      0.74      0.54        35
+
+    accuracy                           0.51        92
+   macro avg       0.56      0.56      0.51        92
+weighted avg       0.59      0.51      0.50        92
+
+	Cohen's kappa: 0.09685863874345546
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           21 |                           36
+	                      Faulty |                            9 |                           26
+
+Human Disagreement Subset human_82 (merge):
+              precision    recall  f1-score   support
+
+        True       0.76      0.45      0.56        65
+       False       0.33      0.67      0.44        27
+
+    accuracy                           0.51        92
+   macro avg       0.55      0.56      0.50        92
+weighted avg       0.64      0.51      0.53        92
+
+	Cohen's kappa: 0.08730158730158721
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           29 |                           36
+	                       False |                            9 |                           18
+
+True rates for human_83:
+	gpt_4o_mini_go_all: 88/147 = 0.60
+	human: 50/121 = 0.41
+	primera_go_all: 75/140 = 0.54
+All human_83:
+                          precision    recall  f1-score   support
+
+                    True       0.89      0.66      0.76       286
+True, but wrong citation       0.67      0.31      0.42        13
+            Unverifiable       0.28      0.88      0.43        50
+                   False       0.66      0.36      0.46        59
+
+                accuracy                           0.63       408
+               macro avg       0.62      0.55      0.52       408
+            weighted avg       0.78      0.63      0.67       408
+
+	Cohen's kappa: 0.36496396114070817
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          190 |                            2 |                           85 |                            9
+	    True, but wrong citation |                            2 |                            4 |                            5 |                            2
+	                Unverifiable |                            6 |                            0 |                           44 |                            0
+	                       False |                           15 |                            0 |                           23 |                           21
+
+All human_83 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.89      0.66      0.76       286
+      Faulty       0.51      0.81      0.62       122
+
+    accuracy                           0.71       408
+   macro avg       0.70      0.74      0.69       408
+weighted avg       0.78      0.71      0.72       408
+
+	Cohen's kappa: 0.40613532951709963
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          190 |                           96
+	                      Faulty |                           23 |                           99
+
+All human_83 (merge):
+              precision    recall  f1-score   support
+
+        True       0.90      0.66      0.76       299
+       False       0.47      0.81      0.59       109
+
+    accuracy                           0.70       408
+   macro avg       0.68      0.73      0.68       408
+weighted avg       0.79      0.70      0.72       408
+
+	Cohen's kappa: 0.3807568858699708
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          198 |                          101
+	                       False |                           21 |                           88
+
+Random Subset human_83:
+                          precision    recall  f1-score   support
+
+                    True       0.91      0.66      0.76       251
+True, but wrong citation       0.60      0.30      0.40        10
+            Unverifiable       0.27      0.88      0.41        40
+                   False       0.62      0.38      0.47        40
+
+                accuracy                           0.64       341
+               macro avg       0.60      0.55      0.51       341
+            weighted avg       0.79      0.64      0.68       341
+
+	Cohen's kappa: 0.35072755417956647
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          165 |                            2 |                           75 |                            9
+	    True, but wrong citation |                            2 |                            3 |                            5 |                            0
+	                Unverifiable |                            5 |                            0 |                           35 |                            0
+	                       False |                            9 |                            0 |                           16 |                           15
+
+Random Subset human_83 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.91      0.66      0.76       251
+      Faulty       0.46      0.82      0.59        90
+
+    accuracy                           0.70       341
+   macro avg       0.69      0.74      0.68       341
+weighted avg       0.79      0.70      0.72       341
+
+	Cohen's kappa: 0.38384410983170947
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          165 |                           86
+	                      Faulty |                           16 |                           74
+
+Random Subset human_83 (merge):
+              precision    recall  f1-score   support
+
+        True       0.92      0.66      0.77       261
+       False       0.43      0.82      0.56        80
+
+    accuracy                           0.70       341
+   macro avg       0.68      0.74      0.67       341
+weighted avg       0.81      0.70      0.72       341
+
+	Cohen's kappa: 0.36526610644257707
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          172 |                           89
+	                       False |                           14 |                           66
+
+Adversarial Subset human_83:
+                          precision    recall  f1-score   support
+
+                    True       0.78      0.71      0.75        35
+True, but wrong citation       1.00      0.33      0.50         3
+            Unverifiable       0.35      0.90      0.50        10
+                   False       0.75      0.32      0.44        19
+
+                accuracy                           0.61        67
+               macro avg       0.72      0.57      0.55        67
+            weighted avg       0.72      0.61      0.61        67
+
+	Cohen's kappa: 0.41029113067027756
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           25 |                            0 |                           10 |                            0
+	    True, but wrong citation |                            0 |                            1 |                            0 |                            2
+	                Unverifiable |                            1 |                            0 |                            9 |                            0
+	                       False |                            6 |                            0 |                            7 |                            6
+
+Adversarial Subset human_83 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.78      0.71      0.75        35
+      Faulty       0.71      0.78      0.75        32
+
+    accuracy                           0.75        67
+   macro avg       0.75      0.75      0.75        67
+weighted avg       0.75      0.75      0.75        67
+
+	Cohen's kappa: 0.493552690084482
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           25 |                           10
+	                      Faulty |                            7 |                           25
+
+Adversarial Subset human_83 (merge):
+              precision    recall  f1-score   support
+
+        True       0.79      0.68      0.73        38
+       False       0.65      0.76      0.70        29
+
+    accuracy                           0.72        67
+   macro avg       0.72      0.72      0.72        67
+weighted avg       0.73      0.72      0.72        67
+
+	Cohen's kappa: 0.4339706536238329
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           26 |                           12
+	                       False |                            7 |                           22
+
+Human Disagreement Subset human_83:
+                          precision    recall  f1-score   support
+
+                    True       0.69      0.54      0.61        57
+True, but wrong citation       0.00      0.00      0.00         8
+            Unverifiable       0.08      0.38      0.14         8
+                   False       0.22      0.11      0.14        19
+
+                accuracy                           0.39        92
+               macro avg       0.25      0.26      0.22        92
+            weighted avg       0.48      0.39      0.42        92
+
+	Cohen's kappa: 0.05014749262536877
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           31 |                            2 |                           19 |                            5
+	    True, but wrong citation |                            1 |                            0 |                            5 |                            2
+	                Unverifiable |                            5 |                            0 |                            3 |                            0
+	                       False |                            8 |                            0 |                            9 |                            2
+
+Human Disagreement Subset human_83 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.69      0.54      0.61        57
+      Faulty       0.45      0.60      0.51        35
+
+    accuracy                           0.57        92
+   macro avg       0.57      0.57      0.56        92
+weighted avg       0.60      0.57      0.57        92
+
+	Cohen's kappa: 0.13493182886694877
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           31 |                           26
+	                      Faulty |                           14 |                           21
+
+Human Disagreement Subset human_83 (merge):
+              precision    recall  f1-score   support
+
+        True       0.72      0.52      0.61        65
+       False       0.31      0.52      0.39        27
+
+    accuracy                           0.52        92
+   macro avg       0.52      0.52      0.50        92
+weighted avg       0.60      0.52      0.54        92
+
+	Cohen's kappa: 0.03481163567000478
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           34 |                           31
+	                       False |                           13 |                           14
+
+True rates for gpt-5.4:
+	gpt_4o_mini_go_all: 58/147 = 0.39
+	human: 57/121 = 0.47
+	primera_go_all: 51/140 = 0.36
+All gpt-5.4:
+                          precision    recall  f1-score   support
+
+                    True       0.94      0.55      0.69       286
+True, but wrong citation       0.09      0.92      0.16        13
+            Unverifiable       0.40      0.50      0.45        50
+                   False       0.62      0.47      0.54        59
+
+                accuracy                           0.54       408
+               macro avg       0.51      0.61      0.46       408
+            weighted avg       0.80      0.54      0.62       408
+
+	Cohen's kappa: 0.3155959023305047
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          156 |                           85 |                           33 |                           12
+	    True, but wrong citation |                            0 |                           12 |                            0 |                            1
+	                Unverifiable |                            6 |                           15 |                           25 |                            4
+	                       False |                            4 |                           23 |                            4 |                           28
+
+All gpt-5.4 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.94      0.55      0.69       286
+      Faulty       0.46      0.92      0.62       122
+
+    accuracy                           0.66       408
+   macro avg       0.70      0.73      0.65       408
+weighted avg       0.80      0.66      0.67       408
+
+	Cohen's kappa: 0.361530895108647
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          156 |                          130
+	                      Faulty |                           10 |                          112
+
+All gpt-5.4 (merge):
+              precision    recall  f1-score   support
+
+        True       0.84      0.85      0.84       299
+       False       0.57      0.56      0.56       109
+
+    accuracy                           0.77       408
+   macro avg       0.71      0.70      0.70       408
+weighted avg       0.77      0.77      0.77       408
+
+	Cohen's kappa: 0.4081664146168329
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          253 |                           46
+	                       False |                           48 |                           61
+
+Random Subset gpt-5.4:
+                          precision    recall  f1-score   support
+
+                    True       0.95      0.58      0.72       251
+True, but wrong citation       0.08      0.90      0.16        10
+            Unverifiable       0.45      0.57      0.51        40
+                   False       0.59      0.47      0.53        40
+
+                accuracy                           0.57       341
+               macro avg       0.52      0.63      0.48       341
+            weighted avg       0.83      0.57      0.66       341
+
+	Cohen's kappa: 0.3295502311895755
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          145 |                           71 |                           26 |                            9
+	    True, but wrong citation |                            0 |                            9 |                            0 |                            1
+	                Unverifiable |                            3 |                           11 |                           23 |                            3
+	                       False |                            4 |                           15 |                            2 |                           19
+
+Random Subset gpt-5.4 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.95      0.58      0.72       251
+      Faulty       0.44      0.92      0.59        90
+
+    accuracy                           0.67       341
+   macro avg       0.70      0.75      0.66       341
+weighted avg       0.82      0.67      0.69       341
+
+	Cohen's kappa: 0.3695413864755641
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          145 |                          106
+	                      Faulty |                            7 |                           83
+
+Random Subset gpt-5.4 (merge):
+              precision    recall  f1-score   support
+
+        True       0.87      0.86      0.87       261
+       False       0.57      0.59      0.58        80
+
+    accuracy                           0.80       341
+   macro avg       0.72      0.72      0.72       341
+weighted avg       0.80      0.80      0.80       341
+
+	Cohen's kappa: 0.4437983121764414
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          225 |                           36
+	                       False |                           33 |                           47
+
+Adversarial Subset gpt-5.4:
+                          precision    recall  f1-score   support
+
+                    True       0.79      0.31      0.45        35
+True, but wrong citation       0.10      1.00      0.19         3
+            Unverifiable       0.18      0.20      0.19        10
+                   False       0.69      0.47      0.56        19
+
+                accuracy                           0.37        67
+               macro avg       0.44      0.50      0.35        67
+            weighted avg       0.64      0.37      0.43        67
+
+	Cohen's kappa: 0.2084388185654008
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           11 |                           14 |                            7 |                            3
+	    True, but wrong citation |                            0 |                            3 |                            0 |                            0
+	                Unverifiable |                            3 |                            4 |                            2 |                            1
+	                       False |                            0 |                            8 |                            2 |                            9
+
+Adversarial Subset gpt-5.4 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.79      0.31      0.45        35
+      Faulty       0.55      0.91      0.68        32
+
+    accuracy                           0.60        67
+   macro avg       0.67      0.61      0.57        67
+weighted avg       0.67      0.60      0.56        67
+
+	Cohen's kappa: 0.21450282240555807
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           11 |                           24
+	                      Faulty |                            3 |                           29
+
+Adversarial Subset gpt-5.4 (merge):
+              precision    recall  f1-score   support
+
+        True       0.65      0.74      0.69        38
+       False       0.58      0.48      0.53        29
+
+    accuracy                           0.63        67
+   macro avg       0.62      0.61      0.61        67
+weighted avg       0.62      0.63      0.62        67
+
+	Cohen's kappa: 0.22417786012042618
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           28 |                           10
+	                       False |                           15 |                           14
+
+Human Disagreement Subset gpt-5.4:
+                          precision    recall  f1-score   support
+
+                    True       0.90      0.46      0.60        57
+True, but wrong citation       0.19      0.88      0.31         8
+            Unverifiable       0.07      0.12      0.09         8
+                   False       0.58      0.37      0.45        19
+
+                accuracy                           0.45        92
+               macro avg       0.44      0.46      0.36        92
+            weighted avg       0.70      0.45      0.50        92
+
+	Cohen's kappa: 0.24016194331983798
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           26 |                           17 |                           10 |                            4
+	    True, but wrong citation |                            0 |                            7 |                            0 |                            1
+	                Unverifiable |                            3 |                            4 |                            1 |                            0
+	                       False |                            0 |                            9 |                            3 |                            7
+
+Human Disagreement Subset gpt-5.4 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.90      0.46      0.60        57
+      Faulty       0.51      0.91      0.65        35
+
+    accuracy                           0.63        92
+   macro avg       0.70      0.69      0.63        92
+weighted avg       0.75      0.63      0.62        92
+
+	Cohen's kappa: 0.32088580112896214
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           26 |                           31
+	                      Faulty |                            3 |                           32
+
+Human Disagreement Subset gpt-5.4 (merge):
+              precision    recall  f1-score   support
+
+        True       0.76      0.77      0.76        65
+       False       0.42      0.41      0.42        27
+
+    accuracy                           0.66        92
+   macro avg       0.59      0.59      0.59        92
+weighted avg       0.66      0.66      0.66        92
+
+	Cohen's kappa: 0.1785714285714286
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           50 |                           15
+	                       False |                           16 |                           11
+
+True rates for gpt-5-4-mini:
+	gpt_4o_mini_go_all: 81/147 = 0.55
+	human: 43/121 = 0.36
+	primera_go_all: 57/140 = 0.41
+All gpt-5-4-mini:
+                          precision    recall  f1-score   support
+
+                    True       0.90      0.57      0.69       286
+True, but wrong citation       0.05      0.46      0.09        13
+            Unverifiable       0.25      0.34      0.29        50
+                   False       0.50      0.34      0.40        59
+
+                accuracy                           0.50       408
+               macro avg       0.42      0.43      0.37       408
+            weighted avg       0.73      0.50      0.58       408
+
+	Cohen's kappa: 0.22849637647409504
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          162 |                           74 |                           38 |                           12
+	    True, but wrong citation |                            6 |                            6 |                            1 |                            0
+	                Unverifiable |                            8 |                           17 |                           17 |                            8
+	                       False |                            5 |                           21 |                           13 |                           20
+
+All gpt-5-4-mini (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.90      0.57      0.69       286
+      Faulty       0.45      0.84      0.59       122
+
+    accuracy                           0.65       408
+   macro avg       0.67      0.71      0.64       408
+weighted avg       0.76      0.65      0.66       408
+
+	Cohen's kappa: 0.3294101420624339
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          162 |                          124
+	                      Faulty |                           19 |                          103
+
+All gpt-5-4-mini (merge):
+              precision    recall  f1-score   support
+
+        True       0.83      0.83      0.83       299
+       False       0.53      0.53      0.53       109
+
+    accuracy                           0.75       408
+   macro avg       0.68      0.68      0.68       408
+weighted avg       0.75      0.75      0.75       408
+
+	Cohen's kappa: 0.3615415298702095
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          248 |                           51
+	                       False |                           51 |                           58
+
+Random Subset gpt-5-4-mini:
+                          precision    recall  f1-score   support
+
+                    True       0.93      0.58      0.71       251
+True, but wrong citation       0.05      0.50      0.09        10
+            Unverifiable       0.30      0.42      0.35        40
+                   False       0.46      0.33      0.38        40
+
+                accuracy                           0.53       341
+               macro avg       0.44      0.46      0.38       341
+            weighted avg       0.78      0.53      0.61       341
+
+	Cohen's kappa: 0.24539894165349463
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          145 |                           69 |                           29 |                            8
+	    True, but wrong citation |                            4 |                            5 |                            1 |                            0
+	                Unverifiable |                            4 |                           12 |                           17 |                            7
+	                       False |                            3 |                           15 |                            9 |                           13
+
+Random Subset gpt-5-4-mini (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.93      0.58      0.71       251
+      Faulty       0.43      0.88      0.57        90
+
+    accuracy                           0.66       341
+   macro avg       0.68      0.73      0.64       341
+weighted avg       0.80      0.66      0.68       341
+
+	Cohen's kappa: 0.3402728400165359
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          145 |                          106
+	                      Faulty |                           11 |                           79
+
+Random Subset gpt-5-4-mini (merge):
+              precision    recall  f1-score   support
+
+        True       0.87      0.85      0.86       261
+       False       0.55      0.57      0.56        80
+
+    accuracy                           0.79       341
+   macro avg       0.71      0.71      0.71       341
+weighted avg       0.79      0.79      0.79       341
+
+	Cohen's kappa: 0.42208831560116755
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          223 |                           38
+	                       False |                           34 |                           46
+
+Adversarial Subset gpt-5-4-mini:
+                          precision    recall  f1-score   support
+
+                    True       0.68      0.49      0.57        35
+True, but wrong citation       0.06      0.33      0.10         3
+            Unverifiable       0.00      0.00      0.00        10
+                   False       0.58      0.37      0.45        19
+
+                accuracy                           0.37        67
+               macro avg       0.33      0.30      0.28        67
+            weighted avg       0.52      0.37      0.43        67
+
+	Cohen's kappa: 0.12199687987519503
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           17 |                            5 |                            9 |                            4
+	    True, but wrong citation |                            2 |                            1 |                            0 |                            0
+	                Unverifiable |                            4 |                            5 |                            0 |                            1
+	                       False |                            2 |                            6 |                            4 |                            7
+
+Adversarial Subset gpt-5-4-mini (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.68      0.49      0.57        35
+      Faulty       0.57      0.75      0.65        32
+
+    accuracy                           0.61        67
+   macro avg       0.63      0.62      0.61        67
+weighted avg       0.63      0.61      0.61        67
+
+	Cohen's kappa: 0.23259911894273122
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           17 |                           18
+	                      Faulty |                            8 |                           24
+
+Adversarial Subset gpt-5-4-mini (merge):
+              precision    recall  f1-score   support
+
+        True       0.60      0.66      0.62        38
+       False       0.48      0.41      0.44        29
+
+    accuracy                           0.55        67
+   macro avg       0.54      0.54      0.53        67
+weighted avg       0.55      0.55      0.55        67
+
+	Cohen's kappa: 0.07287822878228778
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           25 |                           13
+	                       False |                           17 |                           12
+
+Human Disagreement Subset gpt-5-4-mini:
+                          precision    recall  f1-score   support
+
+                    True       0.73      0.47      0.57        57
+True, but wrong citation       0.11      0.38      0.17         8
+            Unverifiable       0.17      0.38      0.23         8
+                   False       0.50      0.26      0.34        19
+
+                accuracy                           0.41        92
+               macro avg       0.38      0.37      0.33        92
+            weighted avg       0.58      0.41      0.46        92
+
+	Cohen's kappa: 0.14418604651162792
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           27 |                           17 |                            8 |                            5
+	    True, but wrong citation |                            4 |                            3 |                            1 |                            0
+	                Unverifiable |                            3 |                            2 |                            3 |                            0
+	                       False |                            3 |                            5 |                            6 |                            5
+
+Human Disagreement Subset gpt-5-4-mini (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.73      0.47      0.57        57
+      Faulty       0.45      0.71      0.56        35
+
+    accuracy                           0.57        92
+   macro avg       0.59      0.59      0.57        92
+weighted avg       0.63      0.57      0.57        92
+
+	Cohen's kappa: 0.16930022573363446
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           27 |                           30
+	                      Faulty |                           10 |                           25
+
+Human Disagreement Subset gpt-5-4-mini (merge):
+              precision    recall  f1-score   support
+
+        True       0.80      0.78      0.79        65
+       False       0.50      0.52      0.51        27
+
+    accuracy                           0.71        92
+   macro avg       0.65      0.65      0.65        92
+weighted avg       0.71      0.71      0.71        92
+
+	Cohen's kappa: 0.2998872604284104
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           51 |                           14
+	                       False |                           13 |                           14
+
+True rates for gemini-3-1-pro-preview:
+	gpt_4o_mini_go_all: 105/147 = 0.71
+	human: 89/121 = 0.74
+	primera_go_all: 69/140 = 0.49
+All gemini-3-1-pro-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.92      0.85      0.89       286
+True, but wrong citation       0.23      0.77      0.35        13
+            Unverifiable       0.74      0.58      0.65        50
+                   False       0.73      0.76      0.74        59
+
+                accuracy                           0.80       408
+               macro avg       0.66      0.74      0.66       408
+            weighted avg       0.85      0.80      0.82       408
+
+	Cohen's kappa: 0.6115016575365011
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          243 |                           25 |                            7 |                           11
+	    True, but wrong citation |                            1 |                           10 |                            0 |                            2
+	                Unverifiable |                           12 |                            5 |                           29 |                            4
+	                       False |                            7 |                            4 |                            3 |                           45
+
+All gemini-3-1-pro-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.92      0.85      0.89       286
+      Faulty       0.70      0.84      0.76       122
+
+    accuracy                           0.85       408
+   macro avg       0.81      0.84      0.82       408
+weighted avg       0.86      0.85      0.85       408
+
+	Cohen's kappa: 0.6505519604111154
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          243 |                           43
+	                      Faulty |                           20 |                          102
+
+All gemini-3-1-pro-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.91      0.93      0.92       299
+       False       0.80      0.74      0.77       109
+
+    accuracy                           0.88       408
+   macro avg       0.86      0.84      0.85       408
+weighted avg       0.88      0.88      0.88       408
+
+	Cohen's kappa: 0.6923753573560365
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          279 |                           20
+	                       False |                           28 |                           81
+
+Random Subset gemini-3-1-pro-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.94      0.86      0.90       251
+True, but wrong citation       0.19      0.70      0.30        10
+            Unverifiable       0.84      0.65      0.73        40
+                   False       0.73      0.80      0.76        40
+
+                accuracy                           0.82       341
+               macro avg       0.67      0.75      0.67       341
+            weighted avg       0.88      0.82      0.85       341
+
+	Cohen's kappa: 0.6292873838125781
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          216 |                           23 |                            4 |                            8
+	    True, but wrong citation |                            1 |                            7 |                            0 |                            2
+	                Unverifiable |                            8 |                            4 |                           26 |                            2
+	                       False |                            5 |                            2 |                            1 |                           32
+
+Random Subset gemini-3-1-pro-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.94      0.86      0.90       251
+      Faulty       0.68      0.84      0.76        90
+
+    accuracy                           0.86       341
+   macro avg       0.81      0.85      0.83       341
+weighted avg       0.87      0.86      0.86       341
+
+	Cohen's kappa: 0.6559172998908589
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          216 |                           35
+	                      Faulty |                           14 |                           76
+
+Random Subset gemini-3-1-pro-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.93      0.95      0.94       261
+       False       0.81      0.76      0.79        80
+
+    accuracy                           0.90       341
+   macro avg       0.87      0.85      0.86       341
+weighted avg       0.90      0.90      0.90       341
+
+	Cohen's kappa: 0.7245624770529924
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          247 |                           14
+	                       False |                           19 |                           61
+
+Adversarial Subset gemini-3-1-pro-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.82      0.77      0.79        35
+True, but wrong citation       0.38      1.00      0.55         3
+            Unverifiable       0.38      0.30      0.33        10
+                   False       0.72      0.68      0.70        19
+
+                accuracy                           0.69        67
+               macro avg       0.57      0.69      0.59        67
+            weighted avg       0.70      0.69      0.69        67
+
+	Cohen's kappa: 0.5128116343490304
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           27 |                            2 |                            3 |                            3
+	    True, but wrong citation |                            0 |                            3 |                            0 |                            0
+	                Unverifiable |                            4 |                            1 |                            3 |                            2
+	                       False |                            2 |                            2 |                            2 |                           13
+
+Adversarial Subset gemini-3-1-pro-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.82      0.77      0.79        35
+      Faulty       0.76      0.81      0.79        32
+
+    accuracy                           0.79        67
+   macro avg       0.79      0.79      0.79        67
+weighted avg       0.79      0.79      0.79        67
+
+	Cohen's kappa: 0.5823686553873553
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           27 |                            8
+	                      Faulty |                            6 |                           26
+
+Adversarial Subset gemini-3-1-pro-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.78      0.84      0.81        38
+       False       0.77      0.69      0.73        29
+
+    accuracy                           0.78        67
+   macro avg       0.77      0.77      0.77        67
+weighted avg       0.78      0.78      0.77        67
+
+	Cohen's kappa: 0.538355535140101
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           32 |                            6
+	                       False |                            9 |                           20
+
+Human Disagreement Subset gemini-3-1-pro-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.84      0.84      0.84        57
+True, but wrong citation       0.56      0.62      0.59         8
+            Unverifiable       0.33      0.25      0.29         8
+                   False       0.70      0.74      0.72        19
+
+                accuracy                           0.75        92
+               macro avg       0.61      0.61      0.61        92
+            weighted avg       0.74      0.75      0.75        92
+
+	Cohen's kappa: 0.551219512195122
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           48 |                            3 |                            3 |                            3
+	    True, but wrong citation |                            1 |                            5 |                            0 |                            2
+	                Unverifiable |                            5 |                            0 |                            2 |                            1
+	                       False |                            3 |                            1 |                            1 |                           14
+
+Human Disagreement Subset gemini-3-1-pro-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.84      0.84      0.84        57
+      Faulty       0.74      0.74      0.74        35
+
+    accuracy                           0.80        92
+   macro avg       0.79      0.79      0.79        92
+weighted avg       0.80      0.80      0.80        92
+
+	Cohen's kappa: 0.5849624060150376
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           48 |                            9
+	                      Faulty |                            9 |                           26
+
+Human Disagreement Subset gemini-3-1-pro-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.86      0.88      0.87        65
+       False       0.69      0.67      0.68        27
+
+    accuracy                           0.82        92
+   macro avg       0.78      0.77      0.77        92
+weighted avg       0.81      0.82      0.81        92
+
+	Cohen's kappa: 0.5495391705069124
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           57 |                            8
+	                       False |                            9 |                           18
+
+True rates for gemini-3-1-flash-lite-preview:
+	gpt_4o_mini_go_all: 123/147 = 0.84
+	human: 95/121 = 0.79
+	primera_go_all: 87/140 = 0.62
+All gemini-3-1-flash-lite-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.87      0.92      0.89       286
+True, but wrong citation       0.19      0.54      0.28        13
+            Unverifiable       0.83      0.20      0.32        50
+                   False       0.63      0.58      0.60        59
+
+                accuracy                           0.77       408
+               macro avg       0.63      0.56      0.52       408
+            weighted avg       0.81      0.77      0.76       408
+
+	Cohen's kappa: 0.49385729721077276
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          264 |                           12 |                            1 |                            9
+	    True, but wrong citation |                            4 |                            7 |                            0 |                            2
+	                Unverifiable |                           22 |                            9 |                           10 |                            9
+	                       False |                           15 |                            9 |                            1 |                           34
+
+All gemini-3-1-flash-lite-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.87      0.92      0.89       286
+      Faulty       0.79      0.66      0.72       122
+
+    accuracy                           0.85       408
+   macro avg       0.83      0.79      0.81       408
+weighted avg       0.84      0.85      0.84       408
+
+	Cohen's kappa: 0.6144477110457791
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          264 |                           22
+	                      Faulty |                           41 |                           81
+
+All gemini-3-1-flash-lite-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.84      0.96      0.90       299
+       False       0.82      0.50      0.62       109
+
+    accuracy                           0.84       408
+   macro avg       0.83      0.73      0.76       408
+weighted avg       0.83      0.84      0.82       408
+
+	Cohen's kappa: 0.520521995369396
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          287 |                           12
+	                       False |                           55 |                           54
+
+Random Subset gemini-3-1-flash-lite-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.89      0.93      0.91       251
+True, but wrong citation       0.20      0.50      0.29        10
+            Unverifiable       0.90      0.23      0.36        40
+                   False       0.60      0.62      0.61        40
+
+                accuracy                           0.80       341
+               macro avg       0.65      0.57      0.54       341
+            weighted avg       0.83      0.80      0.79       341
+
+	Cohen's kappa: 0.5137458846226435
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          234 |                            9 |                            1 |                            7
+	    True, but wrong citation |                            3 |                            5 |                            0 |                            2
+	                Unverifiable |                           16 |                            7 |                            9 |                            8
+	                       False |                           11 |                            4 |                            0 |                           25
+
+Random Subset gemini-3-1-flash-lite-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.89      0.93      0.91       251
+      Faulty       0.78      0.67      0.72        90
+
+    accuracy                           0.86       341
+   macro avg       0.83      0.80      0.81       341
+weighted avg       0.86      0.86      0.86       341
+
+	Cohen's kappa: 0.6280316568802655
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          234 |                           17
+	                      Faulty |                           30 |                           60
+
+Random Subset gemini-3-1-flash-lite-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.87      0.96      0.91       261
+       False       0.81      0.53      0.64        80
+
+    accuracy                           0.86       341
+   macro avg       0.84      0.74      0.77       341
+weighted avg       0.85      0.86      0.85       341
+
+	Cohen's kappa: 0.5539082088738689
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          251 |                           10
+	                       False |                           38 |                           42
+
+Adversarial Subset gemini-3-1-flash-lite-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.73      0.86      0.79        35
+True, but wrong citation       0.17      0.67      0.27         3
+            Unverifiable       0.50      0.10      0.17        10
+                   False       0.75      0.47      0.58        19
+
+                accuracy                           0.63        67
+               macro avg       0.54      0.52      0.45        67
+            weighted avg       0.68      0.63      0.61        67
+
+	Cohen's kappa: 0.39530685920577624
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           30 |                            3 |                            0 |                            2
+	    True, but wrong citation |                            1 |                            2 |                            0 |                            0
+	                Unverifiable |                            6 |                            2 |                            1 |                            1
+	                       False |                            4 |                            5 |                            1 |                            9
+
+Adversarial Subset gemini-3-1-flash-lite-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.73      0.86      0.79        35
+      Faulty       0.81      0.66      0.72        32
+
+    accuracy                           0.76        67
+   macro avg       0.77      0.76      0.76        67
+weighted avg       0.77      0.76      0.76        67
+
+	Cohen's kappa: 0.5175517551755175
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           30 |                            5
+	                      Faulty |                           11 |                           21
+
+Adversarial Subset gemini-3-1-flash-lite-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.68      0.95      0.79        38
+       False       0.86      0.41      0.56        29
+
+    accuracy                           0.72        67
+   macro avg       0.77      0.68      0.67        67
+weighted avg       0.76      0.72      0.69        67
+
+	Cohen's kappa: 0.3847269212179797
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           36 |                            2
+	                       False |                           17 |                           12
+
+Human Disagreement Subset gemini-3-1-flash-lite-preview:
+                          precision    recall  f1-score   support
+
+                    True       0.77      0.88      0.82        57
+True, but wrong citation       0.25      0.38      0.30         8
+            Unverifiable       0.00      0.00      0.00         8
+                   False       0.64      0.47      0.55        19
+
+                accuracy                           0.67        92
+               macro avg       0.42      0.43      0.42        92
+            weighted avg       0.63      0.67      0.65        92
+
+	Cohen's kappa: 0.3711551606288449
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           50 |                            3 |                            1 |                            3
+	    True, but wrong citation |                            3 |                            3 |                            0 |                            2
+	                Unverifiable |                            6 |                            2 |                            0 |                            0
+	                       False |                            6 |                            4 |                            0 |                            9
+
+Human Disagreement Subset gemini-3-1-flash-lite-preview (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.77      0.88      0.82        57
+      Faulty       0.74      0.57      0.65        35
+
+    accuracy                           0.76        92
+   macro avg       0.75      0.72      0.73        92
+weighted avg       0.76      0.76      0.75        92
+
+	Cohen's kappa: 0.4693235448348191
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           50 |                            7
+	                      Faulty |                           15 |                           20
+
+Human Disagreement Subset gemini-3-1-flash-lite-preview (merge):
+              precision    recall  f1-score   support
+
+        True       0.77      0.91      0.83        65
+       False       0.60      0.33      0.43        27
+
+    accuracy                           0.74        92
+   macro avg       0.68      0.62      0.63        92
+weighted avg       0.72      0.74      0.71        92
+
+	Cohen's kappa: 0.27701375245579574
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           59 |                            6
+	                       False |                           18 |                            9
+
+True rates for llama3_3:
+	gpt_4o_mini_go_all: 129/147 = 0.88
+	human: 90/121 = 0.74
+	primera_go_all: 94/140 = 0.67
+All llama3_3:
+                          precision    recall  f1-score   support
+
+                    True       0.79      0.86      0.82       286
+True, but wrong citation       0.07      0.31      0.12        13
+            Unverifiable       0.50      0.10      0.17        50
+                   False       0.55      0.27      0.36        59
+
+                accuracy                           0.66       408
+               macro avg       0.48      0.38      0.37       408
+            weighted avg       0.69      0.66      0.65       408
+
+	Cohen's kappa: 0.24472009404515793
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          246 |                           31 |                            4 |                            5
+	    True, but wrong citation |                            8 |                            4 |                            0 |                            1
+	                Unverifiable |                           26 |                           12 |                            5 |                            7
+	                       False |                           33 |                            9 |                            1 |                           16
+
+All llama3_3 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.79      0.86      0.82       286
+      Faulty       0.58      0.45      0.51       122
+
+    accuracy                           0.74       408
+   macro avg       0.68      0.66      0.66       408
+weighted avg       0.72      0.74      0.73       408
+
+	Cohen's kappa: 0.332027663871718
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          246 |                           40
+	                      Faulty |                           67 |                           55
+
+All llama3_3 (merge):
+              precision    recall  f1-score   support
+
+        True       0.78      0.97      0.87       299
+       False       0.74      0.27      0.39       109
+
+    accuracy                           0.78       408
+   macro avg       0.76      0.62      0.63       408
+weighted avg       0.77      0.78      0.74       408
+
+	Cohen's kappa: 0.2922400832658725
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          289 |                           10
+	                       False |                           80 |                           29
+
+Random Subset llama3_3:
+                          precision    recall  f1-score   support
+
+                    True       0.82      0.88      0.85       251
+True, but wrong citation       0.09      0.40      0.15        10
+            Unverifiable       0.60      0.07      0.13        40
+                   False       0.50      0.25      0.33        40
+
+                accuracy                           0.70       341
+               macro avg       0.50      0.40      0.36       341
+            weighted avg       0.73      0.70      0.68       341
+
+	Cohen's kappa: 0.24966887417218542
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          221 |                           25 |                            2 |                            3
+	    True, but wrong citation |                            5 |                            4 |                            0 |                            1
+	                Unverifiable |                           22 |                            9 |                            3 |                            6
+	                       False |                           23 |                            7 |                            0 |                           10
+
+Random Subset llama3_3 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.82      0.88      0.85       251
+      Faulty       0.57      0.44      0.50        90
+
+    accuracy                           0.77       341
+   macro avg       0.69      0.66      0.67       341
+weighted avg       0.75      0.77      0.76       341
+
+	Cohen's kappa: 0.349857006673022
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          221 |                           30
+	                      Faulty |                           50 |                           40
+
+Random Subset llama3_3 (merge):
+              precision    recall  f1-score   support
+
+        True       0.81      0.98      0.88       261
+       False       0.76      0.24      0.36        80
+
+    accuracy                           0.80       341
+   macro avg       0.78      0.61      0.62       341
+weighted avg       0.80      0.80      0.76       341
+
+	Cohen's kappa: 0.28165382801446326
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          255 |                            6
+	                       False |                           61 |                           19
+
+Adversarial Subset llama3_3:
+                          precision    recall  f1-score   support
+
+                    True       0.60      0.71      0.65        35
+True, but wrong citation       0.00      0.00      0.00         3
+            Unverifiable       0.40      0.20      0.27        10
+                   False       0.67      0.32      0.43        19
+
+                accuracy                           0.49        67
+               macro avg       0.42      0.31      0.34        67
+            weighted avg       0.56      0.49      0.50        67
+
+	Cohen's kappa: 0.17613019891500914
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           25 |                            6 |                            2 |                            2
+	    True, but wrong citation |                            3 |                            0 |                            0 |                            0
+	                Unverifiable |                            4 |                            3 |                            2 |                            1
+	                       False |                           10 |                            2 |                            1 |                            6
+
+Adversarial Subset llama3_3 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.60      0.71      0.65        35
+      Faulty       0.60      0.47      0.53        32
+
+    accuracy                           0.60        67
+   macro avg       0.60      0.59      0.59        67
+weighted avg       0.60      0.60      0.59        67
+
+	Cohen's kappa: 0.18476791347453814
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           25 |                           10
+	                      Faulty |                           17 |                           15
+
+Adversarial Subset llama3_3 (merge):
+              precision    recall  f1-score   support
+
+        True       0.64      0.89      0.75        38
+       False       0.71      0.34      0.47        29
+
+    accuracy                           0.66        67
+   macro avg       0.68      0.62      0.61        67
+weighted avg       0.67      0.66      0.63        67
+
+	Cohen's kappa: 0.2551957467375543
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           34 |                            4
+	                       False |                           19 |                           10
+
+Human Disagreement Subset llama3_3:
+                          precision    recall  f1-score   support
+
+                    True       0.68      0.82      0.75        57
+True, but wrong citation       0.20      0.38      0.26         8
+            Unverifiable       0.00      0.00      0.00         8
+                   False       0.71      0.26      0.38        19
+
+                accuracy                           0.60        92
+               macro avg       0.40      0.37      0.35        92
+            weighted avg       0.59      0.60      0.56        92
+
+	Cohen's kappa: 0.20281030444964876
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           47 |                            9 |                            0 |                            1
+	    True, but wrong citation |                            4 |                            3 |                            0 |                            1
+	                Unverifiable |                            6 |                            2 |                            0 |                            0
+	                       False |                           12 |                            1 |                            1 |                            5
+
+Human Disagreement Subset llama3_3 (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.68      0.82      0.75        57
+      Faulty       0.57      0.37      0.45        35
+
+    accuracy                           0.65        92
+   macro avg       0.62      0.60      0.60        92
+weighted avg       0.64      0.65      0.63        92
+
+	Cohen's kappa: 0.2098765432098766
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           47 |                           10
+	                      Faulty |                           22 |                           13
+
+Human Disagreement Subset llama3_3 (merge):
+              precision    recall  f1-score   support
+
+        True       0.75      0.97      0.85        65
+       False       0.75      0.22      0.34        27
+
+    accuracy                           0.75        92
+   macro avg       0.75      0.60      0.59        92
+weighted avg       0.75      0.75      0.70        92
+
+	Cohen's kappa: 0.2410329985652797
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           63 |                            2
+	                       False |                           21 |                            6
+
+True rates for gemma_4_31b:
+	gpt_4o_mini_go_all: 98/147 = 0.67
+	human: 84/121 = 0.69
+	primera_go_all: 67/140 = 0.48
+All gemma_4_31b:
+                          precision    recall  f1-score   support
+
+                    True       0.94      0.82      0.88       286
+True, but wrong citation       0.20      0.85      0.32        13
+            Unverifiable       0.65      0.64      0.65        50
+                   False       0.73      0.68      0.70        59
+
+                accuracy                           0.78       408
+               macro avg       0.63      0.75      0.64       408
+            weighted avg       0.85      0.78      0.81       408
+
+	Cohen's kappa: 0.5866726699684827
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          235 |                           36 |                            6 |                            9
+	    True, but wrong citation |                            0 |                           11 |                            0 |                            2
+	                Unverifiable |                           10 |                            4 |                           32 |                            4
+	                       False |                            4 |                            4 |                           11 |                           40
+
+All gemma_4_31b (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.94      0.82      0.88       286
+      Faulty       0.68      0.89      0.77       122
+
+    accuracy                           0.84       408
+   macro avg       0.81      0.85      0.82       408
+weighted avg       0.86      0.84      0.85       408
+
+	Cohen's kappa: 0.6503717766176238
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          235 |                           51
+	                      Faulty |                           14 |                          108
+
+All gemma_4_31b (merge):
+              precision    recall  f1-score   support
+
+        True       0.93      0.94      0.94       299
+       False       0.84      0.80      0.82       109
+
+    accuracy                           0.90       408
+   macro avg       0.88      0.87      0.88       408
+weighted avg       0.90      0.90      0.90       408
+
+	Cohen's kappa: 0.7522730103375265
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          282 |                           17
+	                       False |                           22 |                           87
+
+Random Subset gemma_4_31b:
+                          precision    recall  f1-score   support
+
+                    True       0.95      0.84      0.89       251
+True, but wrong citation       0.19      0.80      0.31        10
+            Unverifiable       0.74      0.70      0.72        40
+                   False       0.72      0.72      0.72        40
+
+                accuracy                           0.81       341
+               macro avg       0.65      0.77      0.66       341
+            weighted avg       0.88      0.81      0.84       341
+
+	Cohen's kappa: 0.6129736336650952
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          211 |                           29 |                            5 |                            6
+	    True, but wrong citation |                            0 |                            8 |                            0 |                            2
+	                Unverifiable |                            6 |                            3 |                           28 |                            3
+	                       False |                            4 |                            2 |                            5 |                           29
+
+Random Subset gemma_4_31b (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.95      0.84      0.89       251
+      Faulty       0.67      0.89      0.76        90
+
+    accuracy                           0.85       341
+   macro avg       0.81      0.86      0.83       341
+weighted avg       0.88      0.85      0.86       341
+
+	Cohen's kappa: 0.6590681863627275
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          211 |                           40
+	                      Faulty |                           10 |                           80
+
+Random Subset gemma_4_31b (merge):
+              precision    recall  f1-score   support
+
+        True       0.94      0.95      0.95       261
+       False       0.83      0.81      0.82        80
+
+    accuracy                           0.92       341
+   macro avg       0.89      0.88      0.88       341
+weighted avg       0.92      0.92      0.92       341
+
+	Cohen's kappa: 0.7693608386878593
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          248 |                           13
+	                       False |                           15 |                           65
+
+Adversarial Subset gemma_4_31b:
+                          precision    recall  f1-score   support
+
+                    True       0.86      0.69      0.76        35
+True, but wrong citation       0.23      1.00      0.38         3
+            Unverifiable       0.36      0.40      0.38        10
+                   False       0.73      0.58      0.65        19
+
+                accuracy                           0.63        67
+               macro avg       0.55      0.67      0.54        67
+            weighted avg       0.72      0.63      0.66        67
+
+	Cohen's kappa: 0.4552845528455285
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           24 |                            7 |                            1 |                            3
+	    True, but wrong citation |                            0 |                            3 |                            0 |                            0
+	                Unverifiable |                            4 |                            1 |                            4 |                            1
+	                       False |                            0 |                            2 |                            6 |                           11
+
+Adversarial Subset gemma_4_31b (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.86      0.69      0.76        35
+      Faulty       0.72      0.88      0.79        32
+
+    accuracy                           0.78        67
+   macro avg       0.79      0.78      0.78        67
+weighted avg       0.79      0.78      0.77        67
+
+	Cohen's kappa: 0.5555064130915524
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           24 |                           11
+	                      Faulty |                            4 |                           28
+
+Adversarial Subset gemma_4_31b (merge):
+              precision    recall  f1-score   support
+
+        True       0.83      0.89      0.86        38
+       False       0.85      0.76      0.80        29
+
+    accuracy                           0.84        67
+   macro avg       0.84      0.83      0.83        67
+weighted avg       0.84      0.84      0.83        67
+
+	Cohen's kappa: 0.6614607257694074
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           34 |                            4
+	                       False |                            7 |                           22
+
+Human Disagreement Subset gemma_4_31b:
+                          precision    recall  f1-score   support
+
+                    True       0.92      0.81      0.86        57
+True, but wrong citation       0.35      0.75      0.48         8
+            Unverifiable       0.40      0.50      0.44         8
+                   False       0.73      0.58      0.65        19
+
+                accuracy                           0.73        92
+               macro avg       0.60      0.66      0.61        92
+            weighted avg       0.79      0.73      0.75        92
+
+	Cohen's kappa: 0.5501662429102288
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           46 |                            8 |                            1 |                            2
+	    True, but wrong citation |                            0 |                            6 |                            0 |                            2
+	                Unverifiable |                            3 |                            1 |                            4 |                            0
+	                       False |                            1 |                            2 |                            5 |                           11
+
+Human Disagreement Subset gemma_4_31b (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.92      0.81      0.86        57
+      Faulty       0.74      0.89      0.81        35
+
+    accuracy                           0.84        92
+   macro avg       0.83      0.85      0.83        92
+weighted avg       0.85      0.84      0.84        92
+
+	Cohen's kappa: 0.666988416988417
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           46 |                           11
+	                      Faulty |                            4 |                           31
+
+Human Disagreement Subset gemma_4_31b (merge):
+              precision    recall  f1-score   support
+
+        True       0.90      0.92      0.91        65
+       False       0.80      0.74      0.77        27
+
+    accuracy                           0.87        92
+   macro avg       0.85      0.83      0.84        92
+weighted avg       0.87      0.87      0.87        92
+
+	Cohen's kappa: 0.6785090273733256
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           60 |                            5
+	                       False |                            7 |                           20
+
+True rates for gemma_4_31b_reasoning_off_quantized:
+	gpt_4o_mini_go_all: 107/147 = 0.73
+	human: 80/121 = 0.66
+	primera_go_all: 78/140 = 0.56
+All gemma_4_31b_reasoning_off_quantized:
+                          precision    recall  f1-score   support
+
+                    True       0.91      0.85      0.88       286
+True, but wrong citation       0.15      0.46      0.23        13
+            Unverifiable       0.60      0.56      0.58        50
+                   False       0.65      0.63      0.64        59
+
+                accuracy                           0.77       408
+               macro avg       0.58      0.62      0.58       408
+            weighted avg       0.81      0.77      0.79       408
+
+	Cohen's kappa: 0.5410519335969877
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          242 |                           21 |                           12 |                           11
+	    True, but wrong citation |                            3 |                            6 |                            0 |                            4
+	                Unverifiable |                           12 |                            5 |                           28 |                            5
+	                       False |                            8 |                            7 |                            7 |                           37
+
+All gemma_4_31b_reasoning_off_quantized (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.91      0.85      0.88       286
+      Faulty       0.69      0.81      0.75       122
+
+    accuracy                           0.84       408
+   macro avg       0.80      0.83      0.81       408
+weighted avg       0.85      0.84      0.84       408
+
+	Cohen's kappa: 0.6267001693341345
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          242 |                           44
+	                      Faulty |                           23 |                           99
+
+All gemma_4_31b_reasoning_off_quantized (merge):
+              precision    recall  f1-score   support
+
+        True       0.89      0.91      0.90       299
+       False       0.74      0.71      0.72       109
+
+    accuracy                           0.86       408
+   macro avg       0.82      0.81      0.81       408
+weighted avg       0.85      0.86      0.85       408
+
+	Cohen's kappa: 0.6252335284593349
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          272 |                           27
+	                       False |                           32 |                           77
+
+Random Subset gemma_4_31b_reasoning_off_quantized:
+                          precision    recall  f1-score   support
+
+                    True       0.93      0.86      0.89       251
+True, but wrong citation       0.15      0.40      0.22        10
+            Unverifiable       0.61      0.62      0.62        40
+                   False       0.64      0.68      0.66        40
+
+                accuracy                           0.80       341
+               macro avg       0.58      0.64      0.60       341
+            weighted avg       0.84      0.80      0.81       341
+
+	Cohen's kappa: 0.5680295213791331
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                          216 |                           15 |                           12 |                            8
+	    True, but wrong citation |                            3 |                            4 |                            0 |                            3
+	                Unverifiable |                            8 |                            3 |                           25 |                            4
+	                       False |                            5 |                            4 |                            4 |                           27
+
+Random Subset gemma_4_31b_reasoning_off_quantized (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.93      0.86      0.89       251
+      Faulty       0.68      0.82      0.74        90
+
+    accuracy                           0.85       341
+   macro avg       0.80      0.84      0.82       341
+weighted avg       0.86      0.85      0.85       341
+
+	Cohen's kappa: 0.6394825763386471
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                          216 |                           35
+	                      Faulty |                           16 |                           74
+
+Random Subset gemma_4_31b_reasoning_off_quantized (merge):
+              precision    recall  f1-score   support
+
+        True       0.92      0.91      0.92       261
+       False       0.72      0.75      0.74        80
+
+    accuracy                           0.87       341
+   macro avg       0.82      0.83      0.83       341
+weighted avg       0.88      0.87      0.87       341
+
+	Cohen's kappa: 0.6533815568635795
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                          238 |                           23
+	                       False |                           20 |                           60
+
+Adversarial Subset gemma_4_31b_reasoning_off_quantized:
+                          precision    recall  f1-score   support
+
+                    True       0.79      0.74      0.76        35
+True, but wrong citation       0.15      0.67      0.25         3
+            Unverifiable       0.50      0.30      0.38        10
+                   False       0.67      0.53      0.59        19
+
+                accuracy                           0.61        67
+               macro avg       0.53      0.56      0.49        67
+            weighted avg       0.68      0.61      0.63        67
+
+	Cohen's kappa: 0.4094915254237289
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           26 |                            6 |                            0 |                            3
+	    True, but wrong citation |                            0 |                            2 |                            0 |                            1
+	                Unverifiable |                            4 |                            2 |                            3 |                            1
+	                       False |                            3 |                            3 |                            3 |                           10
+
+Adversarial Subset gemma_4_31b_reasoning_off_quantized (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.79      0.74      0.76        35
+      Faulty       0.74      0.78      0.76        32
+
+    accuracy                           0.76        67
+   macro avg       0.76      0.76      0.76        67
+weighted avg       0.76      0.76      0.76        67
+
+	Cohen's kappa: 0.522707034728406
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           26 |                            9
+	                      Faulty |                            7 |                           25
+
+Adversarial Subset gemma_4_31b_reasoning_off_quantized (merge):
+              precision    recall  f1-score   support
+
+        True       0.74      0.89      0.81        38
+       False       0.81      0.59      0.68        29
+
+    accuracy                           0.76        67
+   macro avg       0.77      0.74      0.74        67
+weighted avg       0.77      0.76      0.75        67
+
+	Cohen's kappa: 0.49718574108818003
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           34 |                            4
+	                       False |                           12 |                           17
+
+Human Disagreement Subset gemma_4_31b_reasoning_off_quantized:
+                          precision    recall  f1-score   support
+
+                    True       0.80      0.79      0.80        57
+True, but wrong citation       0.33      0.38      0.35         8
+            Unverifiable       0.10      0.12      0.11         8
+                   False       0.59      0.53      0.56        19
+
+                accuracy                           0.64        92
+               macro avg       0.46      0.45      0.45        92
+            weighted avg       0.66      0.64      0.65        92
+
+	Cohen's kappa: 0.3671044402751721
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |     True, but wrong citation |                 Unverifiable |                        False
+	                        True |                           45 |                            4 |                            5 |                            3
+	    True, but wrong citation |                            2 |                            3 |                            0 |                            3
+	                Unverifiable |                            5 |                            1 |                            1 |                            1
+	                       False |                            4 |                            1 |                            4 |                           10
+
+Human Disagreement Subset gemma_4_31b_reasoning_off_quantized (strict):
+              precision    recall  f1-score   support
+
+          Ok       0.80      0.79      0.80        57
+      Faulty       0.67      0.69      0.68        35
+
+    accuracy                           0.75        92
+   macro avg       0.74      0.74      0.74        92
+weighted avg       0.75      0.75      0.75        92
+
+	Cohen's kappa: 0.47258225324027914
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                           Ok |                       Faulty
+	                          Ok |                           45 |                           12
+	                      Faulty |                           11 |                           24
+
+Human Disagreement Subset gemma_4_31b_reasoning_off_quantized (merge):
+              precision    recall  f1-score   support
+
+        True       0.83      0.83      0.83        65
+       False       0.59      0.59      0.59        27
+
+    accuracy                           0.76        92
+   macro avg       0.71      0.71      0.71        92
+weighted avg       0.76      0.76      0.76        92
+
+	Cohen's kappa: 0.4233618233618234
+	Confusion matrix:
+	rows=true labels, cols=predicted labels
+	                             |                         True |                        False
+	                        True |                           54 |                           11
+	                       False |                           11 |                           16
+

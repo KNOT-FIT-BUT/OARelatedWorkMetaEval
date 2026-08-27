@@ -1,0 +1,161 @@
+dataset_path:  # Dataset path or None to load it from HF hub
+metrics:  # List of metrics to evaluate
+  - cls: FromFileStatementLevel2CoarseScore
+    config:
+      name: human-1 # Name of metric
+      sample_results_file: sample_eval/human-1.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      dataset_path: ../../hf_dataset/statements/train
+      statement_cls_file: [../../data_results/given_statements_human_82.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileStatementLevel2CoarseScore
+    config:
+      name: human-2 # Name of metric
+      sample_results_file: sample_eval/human-2.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      dataset_path: ../../hf_dataset/statements/train
+      statement_cls_file: [../../data_results/given_statements_human_83.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gpt-5-4 # Name of metric
+      sample_results_file: sample_eval/gpt-5-4_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_free/openai/gpt-5-4/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gpt-5-4 # Name of metric
+      sample_results_file: sample_eval/gpt-5-4_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_based/openai/gpt-5-4/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score\
+  - cls: FromFileCoarseScore
+    config:
+      name: gpt-5-4-mini # Name of metric
+      sample_results_file: sample_eval/gpt-5-4-mini_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_free/openai/gpt-5-4-mini/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gpt-5-4-mini # Name of metric
+      sample_results_file: sample_eval/gpt-5-4-mini_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      score_file: [ ../../data_results/statement_level/reference_based/openai/gpt-5-4-mini/results.jsonl ] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemini-3-1-pro-preview # Name of metric
+      sample_results_file: sample_eval/gemini-3-1-pro-preview_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_free/google/gemini-3-1-pro-preview/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemini-3-1-pro-preview # Name of metric
+      sample_results_file: sample_eval/gemini-3-1-pro-preview_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_based/google/gemini-3-1-pro-preview/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemini-3-1-flash-lite-preview # Name of metric
+      sample_results_file: sample_eval/gemini-3-1-flash-lite-preview_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_free/google/gemini-3-1-flash-lite-preview/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemini-3-1-flash-lite-preview # Name of metric
+      sample_results_file: sample_eval/gemini-3-1-flash-lite-preview_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_based/google/gemini-3-1-flash-lite-preview/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: llama3-3-70b # Name of metric
+      sample_results_file: sample_eval/llama3-3-70b_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_free/vllm/llama3_3/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: llama3-3-70b # Name of metric
+      sample_results_file: sample_eval/llama3-3-70b_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_based/vllm/llama3_3/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemma_4_31b # Name of metric
+      sample_results_file: sample_eval/gemma_4_31b_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_free/vllm/gemma_4_31b/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemma_4_31b # Name of metric
+      sample_results_file: sample_eval/gemma_4_31b_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      score_file: [../../data_results/statement_level/reference_based/vllm/gemma_4_31b/results.jsonl] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemma_4_31b_reason_off_quant # Name of metric
+      sample_results_file: sample_eval/gemma_4_31b_reasoning_off_quantized_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      score_file: [ ../../data_results/statement_level/reference_free/vllm/gemma_4_31b_reasoning_off_quantized/results.jsonl ] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls: FromFileCoarseScore
+    config:
+      name: gemma_4_31b_reason_off_quant # Name of metric
+      sample_results_file: sample_eval/gemma_4_31b_reasoning_off_quantized_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      score_file: [ ../../data_results/statement_level/reference_based/vllm/gemma_4_31b_reasoning_off_quantized/results.jsonl ] # Loads scores for each summary from this file. It expects jsonl with fields: target_paper_id, model, score
+  - cls : Rouge
+    config:
+      name: rouge-1_f1 # Name of metric
+      sample_results_file: sample_eval/rouge-1_f1_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      rouge_type: ROUGE_1 # The type of ROUGE metric: ROUGE_1, ROUGE_2, ROUGE_L, ROUGE_LSUM
+      score_component: FMEASURE # Which ROUGE score component to use: PRECISION, RECALL, FMEASURE
+  - cls: Rouge
+    config:
+      name: rouge-1_f1 # Name of metric
+      sample_results_file: sample_eval/rouge-1_f1_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      rouge_type: ROUGE_1 # The type of ROUGE metric: ROUGE_1, ROUGE_2, ROUGE_L, ROUGE_LSUM
+      score_component: FMEASURE # Which ROUGE score component to use: PRECISION, RECALL, FMEASURE
+  - cls: Rouge
+    config:
+      name: rouge-2_f1 # Name of metric
+      sample_results_file: sample_eval/rouge-2_f1_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      rouge_type: ROUGE_2 # The type of ROUGE metric: ROUGE_1, ROUGE_2, ROUGE_L, ROUGE_LSUM
+      score_component: FMEASURE # Which ROUGE score component to use: PRECISION, RECALL, FMEASURE
+  - cls: Rouge
+    config:
+      name: rouge-2_f1 # Name of metric
+      sample_results_file: sample_eval/rouge-2_f1_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      rouge_type: ROUGE_2 # The type of ROUGE metric: ROUGE_1, ROUGE_2, ROUGE_L, ROUGE_LSUM
+      score_component: FMEASURE # Which ROUGE score component to use: PRECISION, RECALL, FMEASURE
+  - cls: Rouge
+    config:
+      name: rouge-l_f1 # Name of metric
+      sample_results_file: sample_eval/rouge-l_f1_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+      rouge_type: ROUGE_LSUM # The type of ROUGE metric: ROUGE_1, ROUGE_2, ROUGE_L, ROUGE_LSUM
+      score_component: FMEASURE # Which ROUGE score component to use: PRECISION, RECALL, FMEASURE
+  - cls: Rouge
+    config:
+      name: rouge-l_f1 # Name of metric
+      sample_results_file: sample_eval/rouge-l_f1_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+      rouge_type: ROUGE_LSUM # The type of ROUGE metric: ROUGE_1, ROUGE_2, ROUGE_L, ROUGE_LSUM
+      score_component: FMEASURE # Which ROUGE score component to use: PRECISION, RECALL, FMEASURE
+  - cls: BertScore
+    config:
+      name: bert_score # Name of metric
+      sample_results_file: sample_eval/bert_score_reference_free.jsonl # Path to file with detailed results for each sample
+      reference_free: True # Whether the metric is reference free or reference based
+  - cls: BertScore
+    config:
+      name: bert_score # Name of metric
+      sample_results_file: sample_eval/bert_score_reference_based.jsonl # Path to file with detailed results for each sample
+      reference_free: False # Whether the metric is reference free or reference based
+results_file: coarse_results.jsonl # Path to save the scores and correlation for each sample
+violin_plot_file: coarse_violin_plot.pdf # Path to save the violin plot of correlations
+bootstrap_resamples: 10000 # Bootstrap number of bootstrap samples
+confidence_level: 0.95 # Confidence level for bootstrap confidence interval
+random_seed: # Random seed
+reference_based_color: '#ff7f0e' # Reference based color for violin plot
+reference_free_color: '#1f77b4' # Reference free color for violin plot
+violin_width: 0.4 # Width of each violin in the plot. Smaller values produce thinner distributions.
+violin_row_spacing: 0.75 # Vertical distance between adjacent violin rows in data units. Should be >= violin_width to avoid overlap. Lower values bring rows closer together.

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oarelatedworkmetaeval"
+dynamic = ["dependencies"]
+version = "0.0.1"
+requires-python = ">=3.12"
+authors = [
+  {name = "Martin Dočekal"},
+]
+description = "Code for meta evaluation dataset of OARelatedWork"
+readme = "README.md"
+keywords = ["openai", "ollama", "api", "datasets"]
+
+[project.urls]
+Repository = "https://github.com/mdocekal/OARelatedWorkMetaEval"
+
+[project.scripts]
+oarelatedworkmetaeval = "oarelatedworkmetaeval.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["oarelatedworkmetaeval*"]
+exclude = ["tests*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
